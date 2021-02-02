@@ -4,30 +4,67 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
-    <h1>Hello, world!</h1>
+    <v-form class="main-container">
+      <v-container>
+        <v-row>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
+          <v-col cols="12" sm="6">
+            <v-text-field
+                v-model="message1"
+                label="Regular"
+                clearable
+            ></v-text-field>
+          </v-col>
 
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
+          <v-col cols="12" sm="6">
+            <v-text-field
+                v-model="message2"
+                solo
+                label="Solo"
+                clearable
+            ></v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field
+                v-model="message3"
+                filled
+                label="Filled"
+                clearable
+            ></v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field
+                v-model="message4"
+                label="Outlined"
+                outlined
+                clearable
+            ></v-text-field>
+          </v-col>
+
+        </v-row>
+      </v-container>
+    </v-form>
 
   </Layout>
 </template>
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Hello, world!'
-  }
+  data () {
+    return {
+      message1: 'Hey!',
+      message2: 'Hey!',
+      message3: 'Hey!',
+      message4: 'Hey!',
+    }
+  },
 }
 </script>
 
 <style>
-.home-links a {
+.main-container{
   margin-right: 1rem;
 }
 </style>
