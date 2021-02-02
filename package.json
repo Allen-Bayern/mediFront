@@ -9,6 +9,10 @@
   "dependencies": {
     "axios": "^0.21.1",
     "gridsome": "^0.7.0",
-    "gridsome-plugin-algolia": "^2.1.4"
+    "gridsome-plugin-algolia": "^2.1.4",
+    "vuetify": "^2.4.3"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^2.5.2"
   }
 }
