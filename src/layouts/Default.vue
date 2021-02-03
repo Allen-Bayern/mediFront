@@ -70,7 +70,7 @@
 
           <v-col>
             <v-sheet
-                min-height="70vh"
+                min-height=auto
                 rounded="lg"
             >
               <slot/>
