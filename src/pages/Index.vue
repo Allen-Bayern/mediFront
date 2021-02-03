@@ -19,9 +19,14 @@
 </template>
 
 <script>
+import Layout from '~/layouts/Mainpage.vue'
+
 export default {
+  components: {
+    Layout
+  },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'My Website'
   }
 }
 </script>
