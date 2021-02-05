@@ -27,7 +27,7 @@ import Layout from '~/layouts/Mainpage.vue'
 export default {
   
   metaInfo: {
-    title: 'Medical Dictionary'
+    title: 'My Website'
   }
 }
 </script>

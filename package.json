@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "eslint-plugin-gridsome": "^1.6.1",
     "gridsome": "^0.7.0",
+    "gridsome-helper-json": "^1.0.3",
     "gridsome-plugin-algolia": "^2.1.4",
     "stylus": "^0.54.8",
     "vuetify": "^2.4.3"
