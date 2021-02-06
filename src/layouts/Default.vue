@@ -29,7 +29,13 @@
               hide-details
               rounded
               solo-inverted
-          ></v-text-field>
+          >
+            <ais-instant-search
+              :search-client="searchClient"
+              index-name="MedicalDict"
+            >
+            </ais-instant-search>
+          </v-text-field>
         </v-responsive>
       </v-container>
     </v-app-bar>
@@ -39,7 +45,11 @@
         <v-row>
           <v-col cols="2">
             <v-sheet rounded="lg">
-              <v-list color="transparent">
+              <v-list 
+              color="transparent"
+              dark=true
+              style="position:fixed"
+              >
                 <v-list-item
                     v-for="n in 5"
                     :key="n"
@@ -86,6 +96,9 @@
 </template>
 
 <script>
+import algoliasearch from 'algoliasearch/lite';
+import {id, apiKey} from '../accountAndApi.js';
+
 export default {
   data: () => ({
     links: [
@@ -94,6 +107,10 @@ export default {
       'Profile',
       'Updates',
     ],
+    searchClient: algoliasearch(
+      id,
+      apiKey,
+    ),
   }),
 }
 </script>

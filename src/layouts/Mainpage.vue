@@ -1,55 +1,60 @@
 <template>
-    <Layout>
-        <v-app id="inspire">
-            <v-app-bar
-                app
-                color="white"
-                flat
+    <v-app id="inspire">
+            
+        <v-app-bar
+            app
+            color="white"
+            flat
+        >
+        <v-container class="py-0 fill-height">
+            <v-avatar
+                class="mr-10"
+                color="grey darken-1"
+                size="32"
+            ></v-avatar>
+
+            <v-btn
+                v-for="link in links"
+                :key="link"
+                text
             >
-            <v-container class="py-0 fill-height">
-                <v-avatar
-                    class="mr-10"
-                    color="grey darken-1"
-                    size="32"
-                ></v-avatar>
+            {{ link }}
+            </v-btn>
+        </v-container>
+        </v-app-bar>
 
-                <v-btn
-                    v-for="link in links"
-                    :key="link"
-                    text
+        <v-main class="grey lighten-3">
+            <v-container>
+                <v-row
+                    align='center'
                 >
-                {{ link }}
-                </v-btn>
-
-                <v-spacer></v-spacer>
-
-                <v-responsive max-width="260">
-                <v-text-field
-                    dense
-                    flat
-                    hide-details
-                    rounded
-                    solo-inverted
-                ></v-text-field>
-                </v-responsive>
+                    <v-col>
+                        <v-sheet
+                            color='white'
+                            min-height='auto'
+                            rounded="lg"
+                        >
+                            <slot/>
+                        </v-sheet>
+                    </v-col>
+                </v-row>
             </v-container>
-            </v-app-bar>
-
-            <v-main class="grey lighten-3">
-            <slot/>
-            </v-main>
-        </v-app>
-    </Layout>
+        </v-main>
+    </v-app>
 </template>
 
 <script>
 export default {
   data: () => ({
     links: [
-      'Dashboard',
-      'Messages',
-      'Profile',
-      'Updates',
+        '交大岁月',
+        '益民任职',
+        '二院生涯',
+        '临危受命',
+        '军队不得经商',
+        '谈笑风生',
+        '怒斥港记',
+        '二院情深'
     ],
   }),
 }

@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Medical Dictionary',
+  siteDescription : 'a unique dictionary',
   plugins: []
 }

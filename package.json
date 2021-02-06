@@ -7,15 +7,20 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "algoliasearch": "^4.8.4",
     "axios": "^0.21.1",
     "eslint-plugin-gridsome": "^1.6.1",
     "gridsome": "^0.7.0",
     "gridsome-helper-json": "^1.0.3",
     "gridsome-plugin-algolia": "^2.1.4",
+    "sass": "^1.32.6",
     "stylus": "^0.54.8",
+    "vue-instantsearch": "^3.4.3",
     "vuetify": "^2.4.3"
   },
   "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.0",
     "webpack-node-externals": "^2.5.2"
   }
 }

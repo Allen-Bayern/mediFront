@@ -22,8 +22,6 @@
 </template>
 
 <script>
-import Layout from '~/layouts/Mainpage.vue'
-
 export default {
   
   metaInfo: {

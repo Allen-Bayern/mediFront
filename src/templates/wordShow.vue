@@ -6,7 +6,9 @@
 
 <script>
     exoprt default{
-
+        metaInfo{
+            title : null;
+        }
     }
 </script>
 

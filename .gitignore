@@ -124,3 +124,5 @@ build
 .strapi-updater.json
 
 .env.*
+
+src/accountAndApi.js
