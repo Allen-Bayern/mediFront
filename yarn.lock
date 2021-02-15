@@ -1012,6 +1012,13 @@
     log-update "^2.3.0"
     p-map "^1.2.0"
 
+"@meilisearch/instant-meilisearch@^0.2.7":
+  version "0.2.7"
+  resolved "https://repo.huaweicloud.com/repository/npm/@meilisearch/instant-meilisearch/-/instant-meilisearch-0.2.7.tgz#570b6aa13eaf050916cc8aa9dc63311ad69630d5"
+  integrity sha512-4Irgl2MqCmAcbdq/GgvhHwrHrV+kgSSiBSPIATc8HL/92NfQgbpovCR8R4vhibA7dxWWGDWcNZlxRgDsp82/Zg==
+  dependencies:
+    meilisearch "^0.17.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://repo.huaweicloud.com/repository/npm/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2796,6 +2803,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+cross-fetch@^3.0.5:
+  version "3.0.6"
+  resolved "https://repo.huaweicloud.com/repository/npm/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
+  integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
+  dependencies:
+    node-fetch "2.6.1"
 
 cross-spawn@^5.0.1:
   version "5.1.0"
@@ -5969,6 +5983,13 @@ media-typer@0.3.0:
   resolved "https://repo.huaweicloud.com/repository/npm/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+meilisearch@^0.17.1:
+  version "0.17.1"
+  resolved "https://repo.huaweicloud.com/repository/npm/meilisearch/-/meilisearch-0.17.1.tgz#45bda65900c9cf0072c9e847f3bca1751c2def93"
+  integrity sha512-BwS1f6hm0nIEeJeAIChrtxorYHYUC9FAXUo6+RRQN5is3lZF7xvO3zsmWXgL9oMaVm6ByB58kXZLN8Yyw5pcvA==
+  dependencies:
+    cross-fetch "^3.0.5"
+
 memory-fs@^0.4.1:
   version "0.4.1"
   resolved "https://repo.huaweicloud.com/repository/npm/memory-fs/-/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
@@ -6322,6 +6343,11 @@ node-addon-api@^3.0.0:
   version "3.1.0"
   resolved "https://repo.huaweicloud.com/repository/npm/node-addon-api/-/node-addon-api-3.1.0.tgz#98b21931557466c6729e51cb77cd39c965f42239"
   integrity sha512-flmrDNB06LIl5lywUz7YlNGZH/5p0M7W28k8hzd9Lshtdh1wshD2Y+U4h9LD6KObOy1f+fEVdgprPrEymjM5uw==
+
+node-fetch@2.6.1:
+  version "2.6.1"
+  resolved "https://repo.huaweicloud.com/repository/npm/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-gyp@^7.1.0:
   version "7.1.2"

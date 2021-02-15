@@ -7,6 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@meilisearch/instant-meilisearch": "^0.2.7",
     "algoliasearch": "^4.8.4",
     "axios": "^0.21.1",
     "eslint-plugin-gridsome": "^1.6.1",
