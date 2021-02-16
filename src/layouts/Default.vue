@@ -107,10 +107,6 @@ export default {
       'Profile',
       'Updates',
     ],
-    searchClient: algoliasearch(
-      id,
-      apiKey,
-    ),
   }),
 }
 </script>

@@ -5,7 +5,8 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const nodeExternals = require('webpack-node-externals')
+const nodeExternals = require('webpack-node-externals');
+const axios = require('axios');
 
 module.exports = function (api) {
   api.chainWebpack((config, { isServer }) => {

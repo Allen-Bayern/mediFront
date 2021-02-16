@@ -7,5 +7,21 @@
 module.exports = {
   siteName: 'Medical Dictionary',
   siteDescription : 'a unique dictionary',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-strapi',
+      options: {
+        apiURL: 'http://localhost:1337',
+        queryLimit: 1000, // Defaults to 100
+        contentTypes: ['medi-data'],
+        // singleTypes: ['impressum'],
+        // Possibility to login with a Strapi user,
+        // when content types are not publicly available (optional).
+        loginData: {
+          identifier: 'nobodyplay@yeah.net',
+          password: 'Adnn1njy.'
+        }
+      }
+    }
+  ]
 }

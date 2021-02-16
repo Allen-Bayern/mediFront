@@ -126,3 +126,5 @@ build
 .env.*
 
 src/accountAndApi.js
+
+gql
