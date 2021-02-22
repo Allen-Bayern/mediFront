@@ -30,11 +30,6 @@
               rounded
               solo-inverted
           >
-            <ais-instant-search
-              :search-client="searchClient"
-              index-name="MedicalDict"
-            >
-            </ais-instant-search>
           </v-text-field>
         </v-responsive>
       </v-container>
@@ -96,9 +91,6 @@
 </template>
 
 <script>
-import algoliasearch from 'algoliasearch/lite';
-import {id, apiKey} from '../accountAndApi.js';
-
 export default {
   data: () => ({
     links: [
