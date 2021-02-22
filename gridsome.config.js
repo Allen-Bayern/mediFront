@@ -7,5 +7,14 @@
 module.exports = {
   siteName: 'Medical Dictionary',
   siteDescription : 'a unique dictionary',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-strapi',
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Defaults to 100
+        contentTypes: [`medi-data`, `subjects`, `types`],
+      },
+    },
+  ]
 }
