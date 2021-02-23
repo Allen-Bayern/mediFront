@@ -12,9 +12,18 @@ module.exports = {
       use: '@gridsome/source-strapi',
       options: {
         apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Defaults to 100
+        queryLimit: 10000, // Defaults to 100
         contentTypes: [`medi-data`, `subjects`, `types`],
       },
     },
-  ]
+  ],
+  
+  templates : {
+    StrapiMediData : [
+      {
+        path :(node) => { return  `/${node.word}`},
+        component : `./src/templates/wordShow.vue`
+      }
+    ]
+  }
 }
