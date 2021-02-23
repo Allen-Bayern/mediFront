@@ -118,7 +118,7 @@
   "resolved" "https://repo.huaweicloud.com/repository/npm/@babel/compat-data/-/compat-data-7.12.7.tgz"
   "version" "7.12.7"
 
-"@babel/core@^7.0.0", "@babel/core@^7.11.0":
+"@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.11.0":
   "integrity" "sha512-eTAlQKq65zHfkHZV0sIVODCPGVgoo1HdBlbSLi9CqOzuZanMv2ihzY+4paiKr1mH+XmYESMAmJ/dpZ68eN6d8w=="
   "resolved" "https://repo.huaweicloud.com/repository/npm/@babel/core/-/core-7.12.10.tgz"
   "version" "7.12.10"
@@ -1180,8 +1180,8 @@
     "eslint-visitor-keys" "^1.1.0"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
-  "integrity" "sha512-QOi5OW45e2R20VygMSNhyQHvpdUwQZqGPc748JLGCYEy+yp8fNFNdbNIGAgZmi9e+2JHPd6i6idRuqivyicIkA=="
-  "resolved" "https://repo.huaweicloud.com/repository/npm/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.2.1.tgz"
+  "integrity" "sha1-MWJKelBfsU2h1YAjclpMXycOaoE="
+  "resolved" "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz"
   "version" "1.2.1"
 
 "@vue/babel-helper-vue-transform-on@^1.0.2":
@@ -1238,9 +1238,9 @@
     "core-js-compat" "^3.6.5"
     "semver" "^6.1.0"
 
-"@vue/babel-preset-jsx@^1.1.2":
-  "integrity" "sha512-oRVnmN2a77bYDJzeGSt92AuHXbkIxbf/XXSE3klINnh9AXBmVS1DGa1f0d+dDYpLfsAKElMnqKTQfKn7obcL4w=="
-  "resolved" "https://repo.huaweicloud.com/repository/npm/@vue/babel-preset-jsx/-/babel-preset-jsx-1.2.4.tgz"
+"@vue/babel-preset-jsx@^1.1.2", "@vue/babel-preset-jsx@^1.2.4":
+  "integrity" "sha1-kv6nnbbxOwHoDToAmeKSS9y+Toc="
+  "resolved" "https://registry.npm.taobao.org/@vue/babel-preset-jsx/download/@vue/babel-preset-jsx-1.2.4.tgz"
   "version" "1.2.4"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.2.1"

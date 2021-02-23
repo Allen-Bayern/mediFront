@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@gridsome/source-strapi": "^0.2.0",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
     "algoliasearch": "^4.8.4",
     "axios": "^0.21.1",
     "eslint-plugin-gridsome": "^1.6.1",
