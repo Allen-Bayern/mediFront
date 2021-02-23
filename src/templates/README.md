@@ -28,13 +28,12 @@ export default{
 
 ```
 
-```JavaScript
+```Vue
 <template>
     <Layout>
-        <div>
-            <div v-html='$page.strapiMediData.word'></div>
-            <div v-html='$page.strapiMediData.which_type.type_name'></div>
-        </div>
+        <div v-text='$page.strapiMediData.word'></div>
+        <div v-html='$page.strapiMediData.which_type.type_name'></div>
+        <div>{{ $page.strapiMediData.which_subject.subject_name }}</div>
     </Layout>
 </template>
 
