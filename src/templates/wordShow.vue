@@ -1,9 +1,9 @@
 <template>
     <Layout>
-        <div>
-            <div v-html='$page.strapiMediData.word'></div>
-            <div v-html='$page.strapiMediData.which_type.type_name'></div>
-        </div>
+      <div>
+          <div v-html='$page.strapiMediData.word'></div>
+          <div v-html='$page.strapiMediData.which_type.type_name'></div>
+      </div>
     </Layout>
 </template>
 
@@ -35,11 +35,7 @@ query ($id : ID!){
 <script>
 export default{
     metaInfo (){
-        return { title: this.$page.strapiMediData.word }
+      return { title: this.$page.strapiMediData.word }
     }
 }
 </script>
-
-<style>
-
-</style>
