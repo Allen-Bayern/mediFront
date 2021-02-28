@@ -18,7 +18,7 @@ notes.md
 Icon
 .Spotlight-V100
 .Trashes
-._*
+*/.DS_Store
 
 
 ############################
@@ -125,4 +125,5 @@ build
 
 .env.*
 
-src/accountAndApi.js
+# some notes
+tmp.md 

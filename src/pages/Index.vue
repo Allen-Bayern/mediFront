@@ -2,18 +2,23 @@
   <Layout>
     <v-container>
       <v-col>
-        <v-text-field
-          filled
-          label="请输入您要查询的单词"
-          append-icon="mdi-map-marker"
-        ></v-text-field>
+        <v-sheet
+                min-height=auto
+                rounded="lg"
+        >
+          <div>
+            <h1>Search</h1>
+            <LazyHydrate on-interaction>
+              <Search />
+            </LazyHydrate>
+          </div>
+        </v-sheet>
       </v-col>
     </v-container>
   </Layout>
 </template>
 
 <script>
-import Layout from '~/layouts/Mainpage.vue'
 
 export default {
   
@@ -21,7 +26,7 @@ export default {
     title: 'Medical Dictionary'
   },
   components: {
-    Layout
+    Search: () => import('~/components/Search.vue')
   }
 }
 </script>

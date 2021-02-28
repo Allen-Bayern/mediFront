@@ -36,7 +36,7 @@
                 </v-list-item>
               </v-list>
             </v-sheet>
-        </v-col>
+          </v-col>
 
           <v-col>
             <v-sheet
