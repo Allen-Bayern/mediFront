@@ -78,6 +78,9 @@
                             </div>
                         </div>
                         
+                        <div class="relations">
+
+                        </div>
                     </v-sheet>
                 </v-col>
             </v-row>
