@@ -15,7 +15,7 @@
                                 :key="n"
                                 link
                             >
-                                <v-list-item-content>
+                                <v-list-item-content v-if="isNotNull(n.meaning)">
                                     <v-list-item-title>
                                         {{ n.source }}
                                     </v-list-item-title>
@@ -30,7 +30,7 @@
                             >
                                 <v-list-item-content>
                                     <v-list-item-title>
-                                        回到顶部
+                                        词汇延展
                                     </v-list-item-title>
                                 </v-list-item-content>
                             </v-list-item>
@@ -59,16 +59,18 @@
                             style="opacity: 0.22"
                         ></v-divider>
 
+                        <h2 class="font-weight-bold">释义</h2>
                         <div class="means">
                             <div v-for = "(mean, index) in $page.strapiMediData.meanings.meanings" :key="index">
-                                <div class="chinese">
-                                    {{ mean.chinese_meaning }}
+                                <div class="english" v-if="isNotNull(mean.meaning)">
+                                    原文释义：{{  isNotNull(mean.meaning)  }}
                                 </div>
-                                <v-divider
-                                    class="my-4 info"
-                                    style="opacity: 0.22"
-                                ></v-divider>
-                                <div class="source">
+                                <br/>
+                                <div class="chinese" v-if="isNotNull(mean.chinese_meaning)">
+                                    中译释义：{{  isNotNull(mean.chinese_meaning)  }}
+                                </div>
+                                <br/>
+                                <div class="source" v-if="isNotNull(mean.chinese_meaning)">
                                     来源：{{ mean.source }}
                                 </div>
                                 <v-divider
@@ -77,9 +79,13 @@
                                 ></v-divider>
                             </div>
                         </div>
-                        
-                        <div class="relations">
 
+                        <h2 class="font-weight-bold">关联词汇推荐</h2>
+                        <div class="relations" v-for = "(rela, index) in $page.strapiMediData.relfr" :key=index>
+                            <div v-text="index + 1"></div>
+                            <div class='related-word'>{{ rela.rightw }}</div>
+                            <div class='relation-eng'>{{ rela.relaeng }}</div>
+                            <div class='relation-chn'>{{ rela.relachn }}</div>
                         </div>
                     </v-sheet>
                 </v-col>
@@ -101,12 +107,12 @@ query($id : ID!){
             is_kaobo
         }
         meanings{
-        chinese
-        meanings{
-            source
-            meaning
-            chinese_meaning
-        }
+            chinese
+            meanings{
+                source
+                meaning
+                chinese_meaning
+            }
         }
         relfr{
             relaeng
@@ -124,11 +130,14 @@ export default{
         return { title: this.$page.strapiMediData.word }
     },
     computed : {
-
+        isNotNull(){ 
+            return function (txt){
+                if (txt != null){
+                    return txt;
+                }
+            }
+        }
     },
-    methods : {
-
-    }
 }
 </script>
 
