@@ -2,19 +2,18 @@
   <ClientOnly>
     <ais-instant-search
       :search-client="searchClient"
-      index-name="posts"
+      index-name="yb"
     >
       <ais-configure
         :hits-per-page.camel="100"
         :distinct="true"
       />
-      <ais-search-box placeholder="Search" :show-loading-indicator="true" ref="search"></ais-search-box>
+      <ais-search-box placeholder="Search" :show-loading-indicator="true" ref="search" />
       <ais-hits>
         <div class="results" slot-scope="{ items }" @click="toggle(false)">
           <template v-for="item in items">
             <g-link :to="item.path" class="card">
-              <g-image :src="item.image" width="200"></g-image>
-              <p>{{item.title}}</p>
+              <p>{{item.word}}</p>
             </g-link>
           </template>
           <ais-pagination />

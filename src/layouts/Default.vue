@@ -13,11 +13,15 @@
         ></v-avatar>
 
         <v-btn
-            v-for="link in links"
-            :key="link"
-            text
-        >
-          {{ link }}
+          text
+          to="/"
+        >回到首页
+        </v-btn>
+
+        <v-btn
+          text
+          to="/subjects"
+        >所有科室词汇分类
         </v-btn>
 
         <v-spacer></v-spacer>
@@ -31,6 +35,9 @@
               rounded
               solo-inverted
           >
+          <LazyHydrate on-interaction>
+            <Search />
+          </LazyHydrate>
           </v-text-field>
         </v-responsive>
       </v-container>
@@ -43,15 +50,9 @@
 </template>
 
 <script>
-
 export default {
-  data: () => ({
-    links: [
-      'Dashboard',
-      'Messages',
-      'Profile',
-      'Updates',
-    ],
-  }),
+  /**data: () => ({
+    allSubjects: []
+  })*/
 }
 </script>
