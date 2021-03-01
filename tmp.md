@@ -230,3 +230,22 @@ export default {
 https://www.youtube.com/watch?v=oA2Y2Be8hfE&list=PLylMDDjFIp1AeShGoqPqv2v1m6r99OdKC
 
 https://www.youtube.com/watch?v=dTXzxSlhTDM&t=198s
+
+<v-card>
+            <v-list flat>
+                <v-subheader :style="{fontFamily : Roboto, fontSize: 96}">所有科室一览表</v-subheader>
+                <v-list-item-group color="primary"
+                    v-for="(item, index) in $page.allStrapiSubjects.edges.node " :key=index
+                    :to="'/subjects/' + item.subject_name"
+                >
+                    <v-list-item-content>
+                        <v-list-item-title>{{ item.subject_cnh }}</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item-group>
+            </v-list>
+</v-card>
+
+
+
+v-for="n in $page.strapiMediData.meanings.meanings"
+                                :key="n"

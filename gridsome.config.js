@@ -52,7 +52,9 @@ module.exports = {
   templates : {
     StrapiMediData : [
       {
-        path :(node) => { return  `/subjects/${node.subj.subject_name}/${node.word}`},
+        path :(node) => { 
+          let ph = `/subjects/${node.subj.subject_name}/${node.word}`;
+          return  ph.replace(` `, `-`)},
         component : `./src/templates/wordShow.vue`
       }
     ],
