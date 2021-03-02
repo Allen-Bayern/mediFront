@@ -11,8 +11,8 @@
                         >
                             <!--- 这里会是重点修改的地方 --->
                             <v-list-item 
-                                v-for="n in $page.strapiMediData.meanings.meanings"
-                                :key="n"
+                                v-for="(n, index) in $page.strapiMediData.meanings.meanings"
+                                :key="index"
                                 link
                                 @click="goAnchor('source')"
                             >
@@ -82,8 +82,7 @@
                                 ></v-divider>
                             </div>
                         </div>
-
-                        
+                        <tree-graph :items="drawData()"></tree-graph>
                         <h2 class="font-weight-bold">关联词汇推荐</h2>
                         <div id="relations" v-for = "(rela, index) in $page.strapiMediData.relfr" :key=index>
                             <div v-text="index + 1"></div>
@@ -129,8 +128,12 @@ query($id : ID!){
 
 
 <script>
+import TreeGraph from '~/components/TreeGraph.vue';
+//import TreeGraph from '../components/TreeGraph.vue';
+
 export default{
-    metaInfo (){
+    components : { TreeGraph },
+    metaInfo () {
         return { title: this.$page.strapiMediData.word }
     },
     computed : {
@@ -141,12 +144,33 @@ export default{
                 }
             }
         },
+        drawData(){
+            return function() {
+                let rela = this.$page.strapiMediData.relfr;
+                if (rela != null){
+                    let children = [];
+                    rela.forEach(value => {
+                        let child = {
+                            'name' : value.relachn,
+                            'children' : { 'name' : value.rightw }
+                        }
+                        children.push(child)
+                    });
+                    let res = {
+                        'name' : this.$page.strapiMediData.word,
+                        'children' : children
+                    };
+                    return res;
+                }
+            }
+        }
     },
     methods : {
         goAnchor : function(anchor){
             return document.getElementById(anchor).scrollIntoView();
         }
-    }
+    },
+    
 }
 </script>
 

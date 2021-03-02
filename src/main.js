@@ -6,7 +6,7 @@ import 'vuetify/dist/vuetify.min.css';
 import DefaultLayout from '~/layouts/Default.vue';
 import InstantSearch from 'vue-instantsearch';
 import ECharts from 'vue-echarts';
-//import echarts from 'echarts';
+import * as echarts from 'echarts'
 
 export default function (Vue, { appOptions, head, router }) {
   head.link.push({
@@ -34,7 +34,7 @@ export default function (Vue, { appOptions, head, router }) {
   Vue.component('Layout', DefaultLayout);
   Vue.component('v-chart', ECharts);
 
-  //router.mode = 'history'; // 这一步很重要
+  //router.mode = 'history';
 
-  //Vue.prototype.$echarts = echarts;
+  Vue.prototype.$echarts = echarts;
 }
