@@ -153,10 +153,9 @@ export default{
 <style>
     .font-weight-black{
         font-family : 'Roboto', sans-serif;
-        font-size : 48;
-    }
+        font-size : 48;}
+    
     #chineseMeaning{
         font-family : 'Roboto', sans-serif;
-        font-size : 34;
-    }
+        font-size : 34}
 </style>

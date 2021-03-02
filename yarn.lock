@@ -3954,7 +3954,7 @@ fast-glob@^2.0.2, fast-glob@^2.2.6:
     merge2 "^1.2.3"
     micromatch "^3.1.10"
 
-fast-glob@^3.0.3:
+fast-glob@^3.0.3, fast-glob@^3.2.5:
   version "3.2.5"
   resolved "https://repo.huaweicloud.com/repository/npm/fast-glob/-/fast-glob-3.2.5.tgz"
   integrity sha512-2DtFcgT68wiTTiwZ2hNdJfcHNke9XOfnwmBRWXhmeKM8rF0TGwmC/Qto3S7RoZKp5cilZbxzO5iTNTQsJ+EeDg==
@@ -8672,6 +8672,15 @@ stylehacks@^4.0.0:
     browserslist "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
+
+stylus-loader@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/stylus-loader/download/stylus-loader-5.0.0.tgz?cache=0&sync_timestamp=1612279086986&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstylus-loader%2Fdownload%2Fstylus-loader-5.0.0.tgz#d3f548887ab67808cc40d320079c44f8ffa3d9b8"
+  integrity sha1-0/VIiHq2eAjMQNMgB5xE+P+j2bg=
+  dependencies:
+    fast-glob "^3.2.5"
+    klona "^2.0.4"
+    normalize-path "^3.0.0"
 
 stylus@^0.54.8:
   version "0.54.8"
