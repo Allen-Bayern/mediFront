@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import algoliasearch from 'algoliasearch/lite'
+import algoliasearch from 'algoliasearch/lite';
+import 'instantsearch.css/themes/satellite-min.css';
 
 function onCatch(err) {
   console.warn(err)

@@ -19,14 +19,14 @@
 </template>
 
 <script>
-
+import LazyHydrate from 'vue-lazy-hydration';
 export default {
-  
   metaInfo: {
     title: 'Medical Dictionary'
   },
   components: {
-    Search: () => import('~/components/Search.vue')
+    Search: () => import('~/components/Search.vue'),
+    LazyHydrate,
   }
 }
 </script>
