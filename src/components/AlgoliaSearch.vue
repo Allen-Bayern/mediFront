@@ -1,6 +1,13 @@
 <template>
     <ais-instant-search :search-client="SearchClient">
-        <ais-search-box />
+        <ais-search-box 
+            placeholder="string"
+            submit-title="string"
+            reset-title="string"
+            :autofocus="boolean"
+            :show-loading-indicator="boolean"
+            :class-names="object"
+        />
         <ais-hits>
             <div>
                 <h2></h2>

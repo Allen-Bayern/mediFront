@@ -1,24 +1,4 @@
 # Preface
 
 这是医学词典的前端部分，用gridsome来实现。
-
-本分支实现了用Graph QL查询数据。
-
-getChildren(){
-            return function(related, relfr){
-                let children = [];
-                relfr.forEach(  function( value ){
-                    {
-                        let child = {
-                            'name' : value.relachn,
-                            'children' : [{ 'name' : value.rightw }]
-                        };
-                        children.push(child);
-                    }
-                });
-                return {
-                    'name' : related,
-                    'children' : children
-                }
-            }
-        }
+Gridsome是一款基于vue二次开发的前端框架，完全整合了Graph QL接口，让查数据更方便
