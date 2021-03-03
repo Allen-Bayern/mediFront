@@ -35,9 +35,9 @@
               rounded
               solo-inverted
           >
-          <LazyHydrate on-interaction>
-            <Search />
-          </LazyHydrate>
+            <LazyHydrate on-interaction>
+              <algolia-search />
+            </LazyHydrate>
           </v-text-field>
         </v-responsive>
       </v-container>
@@ -50,9 +50,11 @@
 </template>
 
 <script>
+import AlgoliaSearch from '../components/AlgoliaSearch.vue';
+
 export default {
-  /**data: () => ({
-    allSubjects: []
-  })*/
+  components: {
+    AlgoliaSearch
+  }
 }
 </script>

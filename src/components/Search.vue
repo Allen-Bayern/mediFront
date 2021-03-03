@@ -13,7 +13,7 @@
         <div class="results" slot-scope="{ items }" @click="toggle(false)">
           <template v-for="item in items">
             <g-link :to="item.path" class="card">
-              <p>{{item.word}}</p>
+              <p>{{item.title}}</p>
             </g-link>
           </template>
           <ais-pagination />
@@ -25,8 +25,7 @@
 </template>
 
 <script>
-import algoliasearch from 'algoliasearch/lite';
-import 'instantsearch.css/themes/satellite-min.css';
+import algoliasearch from 'algoliasearch/lite'
 
 function onCatch(err) {
   console.warn(err)
@@ -82,3 +81,5 @@ export default {
   width: 100%;
 }
 </style>
+
+#

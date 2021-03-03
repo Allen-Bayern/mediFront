@@ -1,16 +1,11 @@
 <template>
-    <ais-instant-search :search-client="SearchClient">
-        <ais-search-box 
-            placeholder="string"
-            submit-title="string"
-            reset-title="string"
-            :autofocus="boolean"
-            :show-loading-indicator="boolean"
-            :class-names="object"
-        />
+    <ais-instant-search index-name="yb" :search-client="searchClient">
+        <ais-search-box />
         <ais-hits>
-            <div>
-                <h2></h2>
+            <div slot="item" slot-scope="{ item }">
+                <h2>{{ item.word }}</h2>
+                <p>{{ item.subject_chn }}</p>
+                <p>{{ item.meanings }}</p>
             </div>
         </ais-hits>
         <ais-powered-by />
@@ -21,40 +16,21 @@
 import algoliasearch from 'algoliasearch/lite';
 import 'instantsearch.css/themes/satellite-min.css';
 
-function onCatch(err) {
-    console.warn(err)
-};
-
 export default {
-    components: {
-        AisInstantSearch: () =>
-            import ('vue-instantsearch')
-            .then(a => a.AisInstantSearch)
-            .catch(onCatch),
-        AisConfigure: () =>
-            import ('vue-instantsearch')
-            .then(a => a.AisConfigure)
-            .catch(onCatch),
-        AisSearchBox: () =>
-            import ('vue-instantsearch')
-            .then(a => a.AisSearchBox)
-            .catch(onCatch),
-        AisHits: () =>
-            import ('vue-instantsearch')
-            .then(a => a.AisHits)
-            .catch(onCatch),
-        AisPagination: () =>
-            import ('vue-instantsearch')
-            .then(a => a.AisPagination)
-            .catch(onCatch),
-        AisPoweredBy: () =>
-            import ('vue-instantsearch')
-            .then(a => a.AisPoweredBy)
-            .catch(onCatch)
-    }
-}
+  data() {
+    return {
+      searchClient: algoliasearch(
+        'YG3I853V2S', // 应用密码
+        '6c60d235175fd13392f2c09be017efcf' //search-only key
+      ),
+    };
+  },
+};
 </script>
 
 <style>
-
+body {
+  font-family: sans-serif;
+  padding: 1em;
+}
 </style>

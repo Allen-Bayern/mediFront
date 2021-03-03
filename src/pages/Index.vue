@@ -7,9 +7,9 @@
                 rounded="lg"
         >
           <div>
-            <h1>Search</h1>
+            <h1>医学词汇</h1>
             <LazyHydrate on-interaction>
-              <Search />
+              <algolia-search />
             </LazyHydrate>
           </div>
         </v-sheet>
@@ -20,6 +20,7 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
+import AlgoliaSearch from '../components/AlgoliaSearch.vue';
 export default {
   metaInfo: {
     title: 'Medical Dictionary'
@@ -27,6 +28,7 @@ export default {
   components: {
     Search: () => import('~/components/Search.vue'),
     LazyHydrate,
+    AlgoliaSearch
   }
 }
 </script>
