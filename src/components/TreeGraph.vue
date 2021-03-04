@@ -1,5 +1,5 @@
 <template>
-    <div id="tree-graph" class="container" style = "width: 600px;height:400px;"></div>
+    <div id="tree-graph" class="container" style = "width: 800px;height: 500px;"></div>
 </template>
 
 <script>
@@ -29,13 +29,14 @@ export default{
                     id : 0,
                     name : `tree1`,
                     data : [data],
+                    orient : 'TB',
 
                     top : `10%`,
                     left : `8%`,
                     bottom : `22`,
                     right : `20`,
 
-                    symbolSize: 7,
+                    symbolSize: 15,
 
                     edgeShape: 'polyline',
                     edgeForkPosition: '63%',
@@ -56,7 +57,7 @@ export default{
                         label: {
                             position: 'right',
                             verticalAlign: 'middle',
-                            align: 'left'
+                            align: 'middle'
                         }
                     },
 

@@ -17,7 +17,7 @@
                                 @click="goAnchor('source')"
                             >
                                 <v-list-item-content v-if="isNotNull(n.meaning)">
-                                    <v-list-item-title>
+                                    <v-list-item-title v-if="isNotNull(n.meaning)">
                                         {{ n.source }}
                                     </v-list-item-title>
                                 </v-list-item-content>
@@ -28,7 +28,7 @@
                             <v-list-item
                                 link
                                 color="grey lighten-4"
-                                @click="goAnchor('relations')"
+                                @click="overlay = !overlay"
                             >
                                 <v-list-item-content>
                                     <v-list-item-title>
@@ -82,7 +82,16 @@
                                 ></v-divider>
                             </div>
                         </div>
-                        <tree-graph :items="drawData()"></tree-graph>
+                        
+                        <v-overlay :value="overlay">
+                            <tree-graph :items="drawData()"></tree-graph>
+                            <v-btn
+                                color="success"
+                                @click="overlay = false"
+                            >
+                                回主界面
+                            </v-btn>
+                        </v-overlay>
                         <h2 class="font-weight-bold">关联词汇推荐</h2>
                         <div id="relations" v-for = "(rela, index) in $page.strapiMediData.relfr" :key=index>
                             <div v-text="index + 1"></div>
@@ -129,13 +138,15 @@ query($id : ID!){
 
 <script>
 import TreeGraph from '~/components/TreeGraph.vue';
-//import TreeGraph from '../components/TreeGraph.vue';
 
 export default{
     components : { TreeGraph },
     metaInfo () {
         return { title: this.$page.strapiMediData.word }
     },
+    data: () => ({
+        overlay: false,
+    }),
     computed : {
         isNotNull(){ 
             return function (txt){
@@ -152,7 +163,7 @@ export default{
                     rela.forEach(value => {
                         let child = {
                             'name' : value.relachn,
-                            'children' : { 'name' : value.rightw }
+                            'children' : [{ 'name' : value.rightw }]
                         }
                         children.push(child)
                     });

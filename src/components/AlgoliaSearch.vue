@@ -3,7 +3,7 @@
         <ais-search-box />
         <ais-hits>
             <div slot="item" slot-scope="{ item }">
-              <g-link :to="item.path"><
+              <g-link :to="item.path">
                 <h2>{{ item.word }}</h2>
                 <p>{{ item.chinese }}</p>
                 <p>{{ item.subject }}</p>

@@ -3,8 +3,8 @@
     <v-container>
       <v-col>
         <v-sheet
-                min-height=auto
-                rounded="lg"
+            min-height=auto
+            rounded="lg"
         >
           <div>
             <h1>医学词汇</h1>
@@ -26,7 +26,6 @@ export default {
     title: 'Medical Dictionary'
   },
   components: {
-    Search: () => import('~/components/Search.vue'),
     LazyHydrate,
     AlgoliaSearch
   }
