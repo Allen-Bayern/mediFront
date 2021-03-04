@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "serve": "npx --max_old_space_size=4096 vue-cli-service serve"
   },
   "dependencies": {
     "@gridsome/source-strapi": "^0.2.0",

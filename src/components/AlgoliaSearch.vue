@@ -1,11 +1,13 @@
 <template>
-    <ais-instant-search index-name="yb" :search-client="searchClient">
+    <ais-instant-search index-name="medi_data" :search-client="searchClient">
         <ais-search-box />
         <ais-hits>
             <div slot="item" slot-scope="{ item }">
+              <g-link :to="item.path"><
                 <h2>{{ item.word }}</h2>
-                <p>{{ item.subject_chn }}</p>
-                <p>{{ item.meanings }}</p>
+                <p>{{ item.chinese }}</p>
+                <p>{{ item.subject }}</p>
+              </g-link>
             </div>
         </ais-hits>
         <ais-powered-by />
