@@ -7,7 +7,8 @@
 
 const nodeExternals = require('webpack-node-externals')
 
-module.exports = function (api) {
+module.exports = function (api) 
+{
   api.chainWebpack((config, { isServer }) => {
     if (isServer) {
       config.externals([
@@ -17,11 +18,6 @@ module.exports = function (api) {
       ])
     }
   })
-
-  /** 如果是用官方插件提取数据，那么这一部分也没必要再写
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })*/
 
   /** 如果在gridsome.config.js中已经定义了，那么底下这部分不用写了。
    * 如果要用axios进行ajax操作，那么写这一部分

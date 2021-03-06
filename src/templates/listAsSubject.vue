@@ -10,7 +10,7 @@
               <h1>我们已收录的{{ $page.strapiSubjects.subject_chn }}词汇如下：</h1>
               <div class="word-lists">
                 <div v-for="(word, index) in $page.strapiSubjects.medis" :key=index>
-                  <div class="word"><g-link :to="'/subjects/' + $page.strapiSubjects.subject_name + `/` + word.word.replace(` `, `-`)">{{ word.word }}   {{ word.meanings.chinese }}</g-link></div>
+                  <div class="word"><g-link :to="'/words/' + word.id">{{ word.word }}   {{ word.meanings.chinese }}</g-link></div>
                 </div>
               </div>
             </v-sheet>

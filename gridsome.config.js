@@ -14,7 +14,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 10000, // Defaults to 100
-        contentTypes: [`medi-data`,`subjects`],
+        contentTypes: [`medi-data`,`subjects`, `etyms`, `meaning-of-etyms`],
       },
     }
   ],
@@ -23,7 +23,7 @@ module.exports = {
     StrapiMediData : [
       {
         path :(node) => { 
-          let ph = `/subjects/${node.subj.subject_name}/${node.word}`;
+          let ph = `/words/${node.id}`;
           return  ph.replace(` `, `-`)},
         component : `./src/templates/wordShow.vue`
       }
@@ -32,6 +32,21 @@ module.exports = {
       {
         path :(node) => { return `/subjects/${node.subject_name}` },
         component : `./src/templates/listAsSubject.vue`
+      }
+    ],
+    StrapiMeaningOfEtyms: [
+      {
+        path: (node) => { 
+          let ph = `/etyms/meaning/${node.id}`;
+          return  ph.replace(` `, `-`);
+        },
+        component : `./src/templates/listAsMeaning.vue`
+      }
+    ],
+    StrapiEtyms : [
+      {
+        path: (node) => { return `/etyms/root/${node.id}`; },
+        component : `./src/templates/listAsRoot.vue`
       }
     ]
   }
