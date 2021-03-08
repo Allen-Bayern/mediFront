@@ -14,8 +14,7 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-    ],
+    files: ["src/**/*.js", "test/**/*.test.js"],
 
 
     // list of files / patterns to exclude
