@@ -4,12 +4,12 @@
           <ais-state-results>
             <template slot-scope="{ state: { query }}">
               <ais-hits v-show="query.length > 0">
-                <div slot="item" slot-scope="{ item }">
-                  <g-link :to="item.path">
-                    <h2>{{ item.word }}</h2>
-                  </g-link>
-                  <p>{{ item.meaning }}</p>
-                  <p>{{ item._subject }}</p>
+                <div slot="item" slot-scope="{ item }" class="hits">
+                  <div id="word">
+                    <g-link :to="item.path"><h2>{{ item.word }}</h2></g-link>
+                  </div>
+                  <div id="meaning"><p>{{ item.meaning }}</p></div>
+                  <div id="subj"><p>所属科室：{{ item._subject }}</p></div>
                 </div>
               </ais-hits>
             </template>
@@ -33,3 +33,30 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.hits{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas : 'a b'
+                        'c d';
+  justify-items : start;
+  align-items : center;
+}
+#word{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  grid-column : 1 / 2;
+  grid-row: 1 / 3;
+  font-size: 0.6em;
+}
+#meaning{
+  grid-area: b;
+  font-size: 1em;
+}
+#subj{
+  grid-area: d;
+  font-size: 1em;
+}
+</style>

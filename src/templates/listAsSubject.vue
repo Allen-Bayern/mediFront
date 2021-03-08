@@ -26,6 +26,7 @@ query ($id: ID!) {
     subject_name
     subject_chn
     medis{
+      id
       word
       meanings{
         chinese

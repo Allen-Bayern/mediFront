@@ -4,7 +4,7 @@
           <ais-state-results>
             <template slot-scope="{ state: { query }}">
               <ais-hits v-show="query.length > 0">
-                <div slot="item" slot-scope="{ item }">
+                <div slot="item" slot-scope="{ item }" class="resultshow">
                   <g-link :to="item.path">
                     <h2>{{ item.word }}</h2>
                   </g-link>

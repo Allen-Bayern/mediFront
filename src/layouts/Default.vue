@@ -49,10 +49,12 @@
 
 <script>
 import AlgoliaSearch from '../components/AlgoliaSearch.vue';
+import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
   components: {
-    AlgoliaSearch
+    AlgoliaSearch,
+    LazyHydrate
   }
 }
 </script>

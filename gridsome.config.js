@@ -14,7 +14,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 10000, // Defaults to 100
-        contentTypes: [`medi-data`,`subjects`, `etyms`, `meaning-of-etyms`],
+        contentTypes: [`medi-data`,`subjects`, `etyms`, `meaning-of-etyms`, `abbrs`],
       },
     }
   ],
@@ -47,6 +47,12 @@ module.exports = {
       {
         path: (node) => { return `/etyms/root/${node.id}`; },
         component : `./src/templates/listAsRoot.vue`
+      }
+    ],
+    StrapiAbbrs : [
+      {
+        path: (node) => { return `/abbrs/${node.id}`; },
+        component : `./src/templates/Abbr.vue`
       }
     ]
   }

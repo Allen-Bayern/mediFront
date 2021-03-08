@@ -36,17 +36,13 @@ query{
         data (){
             return {
                 items:
-                    [{ sub_eng : `behavioral medicine`, sub_chn : `行为医学`, sub_icon : `mdi-run-fast` },
-                    { sub_eng : `biochemistry`, sub_chn : `生物化学`, sub_icon : `mdi-bio`},
+                    [
                     { sub_eng : `endocrine`, sub_chn : `内分泌科`, sub_icon : `mdi-medical-bag`},
-                    { sub_eng : `genesiology`, sub_chn : `生殖科`, sub_icon : `mdi-reproduction` },
-                    { sub_eng : `hematology`, sub_chn : `血液科`, sub_icon : `mdi-blood-bag`},
                     { sub_eng : `microorganism`, sub_chn : `微生物学`, sub_icon : `mdi-rhombus-split`},
-                    { sub_eng : `oncology`, sub_chn : `肿瘤科`, sub_icon : `mdi-zodiac-cancer`},
                     { sub_eng : `ophthalmic`, sub_chn : `眼科`, sub_icon: `mdi-eye-check`},
-                    { sub_eng : `pediatric`, sub_chn : `儿科`, sub_icon : `mdi-human-child` },
                     { sub_eng : `respiratory`, sub_chn : `呼吸科`, sub_icon : `mdi-lungs` },
-                    { sub_eng : `urology`, sub_chn: `泌尿科`, sub_icon : `mdi-water-remove` }]
+                    { sub_eng : `urology`, sub_chn: `泌尿科`, sub_icon : `mdi-water-remove` }
+                    ]
             }
         }
     }

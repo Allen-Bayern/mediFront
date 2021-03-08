@@ -8,10 +8,11 @@
                             color="transparent"
                             dark=true
                             style="position:fixed"
+                            v-if="isNotNull(this.$page.strapiMediData.meanings.meanings)"
                         >
                             <!--- 这里会是重点修改的地方 --->
                             <v-list-item 
-                                v-for="(n, index) in $page.strapiMediData.meanings.meanings"
+                                v-for="(n, index) in allSources()"
                                 :key="index"
                                 link
                                 @click="goAnchor('source')"
@@ -22,7 +23,6 @@
                                     </v-list-item-title>
                                 </v-list-item-content>
                             </v-list-item>
-
                             <v-divider class="my-2"></v-divider>
 
                             <v-list-item
@@ -64,7 +64,7 @@
 
                         <h2 class="font-weight-bold">释义</h2>
                         <div class="means">
-                            <div v-for = "(mean, index) in $page.strapiMediData.meanings.meanings" :key="index">
+                            <div v-for = "(mean, index) in allSources()" :key="index">
                                 <div id="source" v-if="isNotNull(mean.chinese_meaning)">
                                     来源：{{ mean.source }}
                                 </div>
@@ -92,13 +92,6 @@
                                 回主界面
                             </v-btn>
                         </v-overlay>
-                        <h2 class="font-weight-bold">关联词汇推荐</h2>
-                        <div id="relations" v-for = "(rela, index) in $page.strapiMediData.relfr" :key=index>
-                            <div v-text="index + 1"></div>
-                            <div class='related-word'>{{ rela.rightw }}</div>
-                            <div class='relation-eng'>{{ rela.relaeng }}</div>
-                            <div class='relation-chn'>{{ rela.relachn }}</div>
-                        </div>
                     </v-sheet>
                 </v-col>
             </v-row>
@@ -148,6 +141,18 @@ export default{
         overlay: false,
     }),
     computed : {
+        allSources(){
+            return () =>{
+                let res = [];
+                let means = this.$page.strapiMediData.meanings.meanings;
+                means.forEach(value => {
+                    if(value != null){
+                        res.push(value);
+                    }
+                });
+                return res;
+            }
+        },
         isNotNull(){ 
             return function (txt){
                 if (txt != null){

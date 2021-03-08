@@ -36,7 +36,7 @@ export default{
                     bottom : `22`,
                     right : `20`,
 
-                    symbolSize: 15,
+                    symbolSize: 20,
 
                     edgeShape: 'polyline',
                     edgeForkPosition: '63%',
