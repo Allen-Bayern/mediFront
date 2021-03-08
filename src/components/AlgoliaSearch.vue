@@ -1,5 +1,5 @@
 <template>
-    <ais-instant-search index-name="medi_data" :search-client="searchClient">
+    <ais-instant-search index-name="medi_words" :search-client="searchClient">
         <ais-search-box placeholder="请输入您要查找的单词" id="inbox" />
           <ais-state-results>
             <template slot-scope="{ state: { query }}">
