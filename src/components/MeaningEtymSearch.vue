@@ -1,6 +1,6 @@
 <template>
     <ais-instant-search index-name="meanings_etym" :search-client="searchClient">
-        <ais-search-box placeholder="请输入您要查找的词根词缀" id="inbox" />
+        <ais-search-box placeholder="请输入您要查找的意义" id="inbox" />
             <ais-state-results>
                 <template slot-scope="{ state: { query }}">
                     <ais-hits v-show="query.length > 0">
