@@ -10,7 +10,7 @@
                         <h1>表示{{$page.strapiMeaningOfEtyms.chinese}}的词根词缀有：</h1>
                         <div v-for="(etym, index) in $page.strapiMeaningOfEtyms.etyms" :key=index>
                             <div>{{ index + 1 }}.<g-link :to="'/etyms/root/'+etym.id">{{ etym.word }}</g-link></div>
-                            <div>类型：{{ etym.type }}</div>
+                            <div>类型：{{ etym.type_chn }}</div>
                         </div>
                     </v-sheet>
                 </v-col>
@@ -30,6 +30,7 @@ query($id : ID!){
             word
             variation 
             type
+            type_chn
         }
     }
 }

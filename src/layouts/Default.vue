@@ -6,12 +6,6 @@
         flat
     >
       <v-container class="py-0 fill-height">
-        <v-avatar
-            class="mr-10"
-            color="grey darken-1"
-            size="32"
-        ></v-avatar>
-
         <v-btn
           text
           to="/"
@@ -22,6 +16,18 @@
           text
           to="/subjects"
         >所有科室词汇分类
+        </v-btn>
+
+        <v-btn
+          text
+          to="/meaning"
+        >按意义查找词根
+        </v-btn>
+
+        <v-btn
+          text
+          to="/root"
+        >词根词缀查询
         </v-btn>
 
         <v-spacer></v-spacer>

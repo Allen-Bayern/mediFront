@@ -1,9 +1,20 @@
 <template>
     <Layout>
-        <h1 id="heading">按意义查找词根</h1>
-        <LazyHydrate on-interaction>
-            <etym-search style="max-width:600px;" />
-        </LazyHydrate>
+        <v-container>
+            <v-col>
+                <v-sheet
+                    min-height=auto
+                    rounded="lg"
+                >
+                <div>
+                    <h1 id="heading">查询词根词缀</h1>
+                    <LazyHydrate on-interaction>
+                        <etym-search style="max-width:600px;" />
+                    </LazyHydrate>
+                    </div>
+                </v-sheet>
+            </v-col>
+        </v-container>
     </Layout>
 </template>
 

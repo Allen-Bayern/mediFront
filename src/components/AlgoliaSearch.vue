@@ -8,8 +8,8 @@
                   <g-link :to="item.path">
                     <h2>{{ item.word }}</h2>
                   </g-link>
-                  <p>{{ item.chinese }}</p>
-                  <p>{{ item.subject }}</p>
+                  <p>{{ item.meaning }}</p>
+                  <p>{{ item._subject }}</p>
                 </div>
               </ais-hits>
             </template>
