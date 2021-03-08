@@ -28,17 +28,9 @@
 
         <v-responsive max-width="260">
           <!--- 用于建立搜索 --->
-          <v-text-field
-              dense
-              flat
-              hide-details
-              rounded
-              solo-inverted
-          >
-            <LazyHydrate on-interaction>
-              <algolia-search />
-            </LazyHydrate>
-          </v-text-field>
+          <LazyHydrate on-interaction>
+            <algolia-search style="max-width : 300px" />
+          </LazyHydrate>
         </v-responsive>
       </v-container>
     </v-app-bar>

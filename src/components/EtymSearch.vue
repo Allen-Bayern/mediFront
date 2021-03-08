@@ -1,6 +1,6 @@
 <template>
-    <ais-instant-search index-name="medi_data" :search-client="searchClient">
-        <ais-search-box placeholder="请输入您要查找的单词" id="inbox" />
+    <ais-instant-search index-name="medi_etyms" :search-client="searchClient">
+        <ais-search-box placeholder="请输入您要查找的词根词缀" id="inbox" />
           <ais-state-results>
             <template slot-scope="{ state: { query }}">
               <ais-hits v-show="query.length > 0">
@@ -8,8 +8,9 @@
                   <g-link :to="item.path">
                     <h2>{{ item.word }}</h2>
                   </g-link>
-                  <p>{{ item.chinese }}</p>
-                  <p>{{ item.subject }}</p>
+                  <p v-if="isNotNull(item.vari)">{{ item.vari }}</p>
+                  <p>{{ item.meaning }}</p>
+                  <p>{{ item.chinese_type }}</p>
                 </div>
               </ais-hits>
             </template>
@@ -31,5 +32,18 @@ export default {
       ),
     };
   },
-};
+  computed :{
+    isNotNull(){ 
+        return function (txt){
+            if (txt != null){
+                return txt;
+            }   
+        }
+        }
+    }
+}
 </script>
+
+<style scoped>
+
+</style>

@@ -9,7 +9,7 @@
           <div>
             <h1>医学词汇</h1>
             <LazyHydrate on-interaction>
-              <algolia-search />
+              <algolia-search style="max-width:600px;" />
             </LazyHydrate>
           </div>
         </v-sheet>
@@ -32,8 +32,9 @@ export default {
 }
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
+<style scoped lang="css">
+#inbox{
+  padding : 10px;
+  max-width : 500px;
 }
 </style>
