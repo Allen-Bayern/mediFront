@@ -6133,6 +6133,15 @@ karma-jasmine@^4.0.1:
   dependencies:
     jasmine-core "^3.6.0"
 
+karma-webpack@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/karma-webpack/download/karma-webpack-5.0.0.tgz?cache=0&sync_timestamp=1612267076830&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fkarma-webpack%2Fdownload%2Fkarma-webpack-5.0.0.tgz#2a2c7b80163fe7ffd1010f83f5507f95ef39f840"
+  integrity sha1-Kix7gBY/5//RAQ+D9VB/le85+EA=
+  dependencies:
+    glob "^7.1.3"
+    minimatch "^3.0.4"
+    webpack-merge "^4.1.5"
+
 karma@^6.1.1:
   version "6.1.1"
   resolved "https://registry.npm.taobao.org/karma/download/karma-6.1.1.tgz?cache=0&sync_timestamp=1613164389577&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fkarma%2Fdownload%2Fkarma-6.1.1.tgz#a7539618cca0f2cbb26d5497120ec31fe340c2a1"
@@ -10074,7 +10083,7 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@^4.2.1:
+webpack-merge@^4.1.5, webpack-merge@^4.2.1:
   version "4.2.2"
   resolved "https://repo.huaweicloud.com/repository/npm/webpack-merge/-/webpack-merge-4.2.2.tgz"
   integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==

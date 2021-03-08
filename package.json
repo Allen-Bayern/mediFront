@@ -25,6 +25,7 @@
     "karma-coverage": "^2.0.3",
     "karma-firefox-launcher": "^2.1.0",
     "karma-jasmine": "^4.0.1",
+    "karma-webpack": "^5.0.0",
     "sass": "^1.32.6",
     "stylus": "^0.54.8",
     "vue-echarts": "^6.0.0-beta.3",
