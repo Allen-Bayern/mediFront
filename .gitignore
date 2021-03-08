@@ -111,6 +111,7 @@ node_modules
 
 testApp
 coverage
+test/
 
 ############################
 # Strapi
